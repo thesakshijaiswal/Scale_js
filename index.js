@@ -11,12 +11,14 @@
  function applyScalableStyles() {
      const container = document.getElementById("scalableContainer");
      const text = document.getElementById("scalableText");
+     const caption = document.getElementById("caption");
 
      // Apply scaled styles
      container.style.width = scalePx(300) + "px";
      container.style.height = scalePx(200) + "px";
      container.style.padding = scalePx(20) + "px";
      text.style.fontSize = scalePx(16) + "px";
+     caption.style.fontSize = scalePx(3) + "px";
  }
 
  // Apply styles initially
