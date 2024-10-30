@@ -1,31 +1,31 @@
- // Set base width and calculate initial scale factor
- const BASE_WIDTH = 375;
- let scaleFactor = window.innerWidth / BASE_WIDTH;
+// Set base width and calculate initial scale factor
+const BASE_WIDTH = 375;
+let scaleFactor = window.innerWidth / BASE_WIDTH;
 
- // Scaling function
- function scalePx(px) {
-     return Math.round(px * scaleFactor);
- }
+// Scaling function
+function scalePx(px) {
+  return Math.round(px * scaleFactor);
+}
 
- // Function to apply scalable styles
- function applyScalableStyles() {
-     const container = document.getElementById("scalableContainer");
-     const text = document.getElementById("scalableText");
-     const caption = document.getElementById("caption");
+// Function to apply scalable styles
+function applyScalableStyles() {
+  const container = document.getElementById("scalableContainer");
+  const text = document.getElementById("scalableText");
+  const caption = document.getElementById("caption");
 
-     // Apply scaled styles
-     container.style.width = scalePx(300) + "px";
-     container.style.height = scalePx(200) + "px";
-     container.style.padding = scalePx(20) + "px";
-     text.style.fontSize = scalePx(16) + "px";
-     caption.style.fontSize = scalePx(3) + "px";
- }
+  // Apply scaled styles
+  container.style.width = scalePx(300) + "px";
+  container.style.height = scalePx(140) + "px";
+  container.style.padding = scalePx(20) + "px";
+  text.style.fontSize = scalePx(16) + "px";
+  caption.style.fontSize = scalePx(3) + "px";
+}
 
- // Apply styles initially
- applyScalableStyles();
+// Apply styles initially
+applyScalableStyles();
 
- // Recalculate scale factor and apply styles on resize
- window.addEventListener('resize', () => {
-     scaleFactor = window.innerWidth / BASE_WIDTH;
-     applyScalableStyles();
- });
+// Recalculate scale factor and apply styles on resize
+window.addEventListener("resize", () => {
+  scaleFactor = window.innerWidth / BASE_WIDTH;
+  applyScalableStyles();
+});
